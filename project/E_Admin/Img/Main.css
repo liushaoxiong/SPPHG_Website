@@ -1,0 +1,111 @@
+body {
+	margin: 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	background:url(bg.jpg)
+}
+
+td{
+	color:#333;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif
+	}
+	
+
+a:link,a:visited,a:active {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration:none;
+	color: #009fff;
+}
+
+.Line25{line-height:25px}
+
+.Red{color:#FF0000}
+
+.Dot{background:url(Dot.jpg) bottom repeat-x}
+
+img{border:none}
+
+.P1{padding-top:10px}
+
+.P2{padding-top:5px}
+
+.Textarea {color:#666666; line-height:22px}
+
+.Title {font-size:14px; color:#007bbb; font-weight:bold}
+
+.Wryh{font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+
+.T13{font-size:13px}
+
+.T14{font-size:14px}
+
+.T16{font-size:16px}
+
+.T20{font-size:20px}
+
+.T24{font-size:22px}
+
+.white,.white a:link,.white a:visited,.white a:active,.white a:hover{color:#FFFFFF}
+
+.button{background-color:#e4e4e4; border:1px solid #959595; color:#000}
+
+.tjButton{background:url(Buttonbg.jpg) no-repeat; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; width:91px; height:30px; font-size:12px; border:none; padding-top:2px; font-weight:bold}
+
+.Titleinput{width:98%; height:30px; padding-top:5px; color:#333333; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; background:none; border:none}
+
+.input{ height:30px; padding-top:5px; color:#333333; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; background:none; border:1px solid  #ccc}
+
+.Title1input{width:100%; height:80px; padding:2px; color:#333333; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; background:none; border:none}
+
+#Empty{width:98%; height:20px}
+.inputbg{background:url(input.jpg) no-repeat}
+
+.inputbg1{background:url(input1.jpg) no-repeat}
+
+.Logininput{background:none; border:none; width:260px;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; height:34px; color:#333333; padding-top:10px; padding-left:30px}
+
+.Blue,.Blue a:link,.Blue a:visited,.Blue a:active,.Blue a:hover{color:#009ced}
+
+.Time{font-size:10px}
+
+.left_Menu a:link,.left_Menu a:visited,.left_Menu a:active{ width:100%; height:45px;display:block;color:#333; text-decoration:none; padding-top:10px; padding-left:30px}
+.left_Menu a:hover{ width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:10px; background:url(L_menu.jpg) repeat-x;padding-left:30px}
+
+.left_Menu1 a:link,.left_Menu1 a:visited,.left_Menu1 a:active{  width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:10px; background:url(L_menu.jpg) repeat-x;padding-left:30px}
+.left_Menu1 a:hover{ width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:10px; background:url(L_menu.jpg) repeat-x;padding-left:30px}
+
+.left_Menu a:link,.left_Menu a:visited,.left_Menu a:active{ width:100%; height:45px;display:block;color:#333; text-decoration:none; padding-top:10px; padding-left:30px}
+.left_Menu a:hover{ width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:10px; background:url(L_menu.jpg) repeat-x;padding-left:30px}
+
+.C_Menu a:link,.C_Menu a:visited,.C_Menu a:active{ width:100%; height:45px;display:block;color:#7b8087; text-decoration:none; padding-top:15px; padding-left:30px; font-weight:bold}
+.C_Menu a:hover{ width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:15px; background-color:#27282b;padding-left:30px;font-weight:bold}
+
+.C_Menu1 a:hover,.C_Menu1 a:link,.C_Menu1 a:visited,.C_Menu1 a:active{ width:100%; height:45px;display:block;color:#fff; text-decoration:none; padding-top:15px; background-color:#27282b;padding-left:30px;font-weight:bold}
+
+.Yellow{ color:#f6ff04}
+
+DIV.scott {
+PADDING-BOTTOM: 3px; PADDING-TOP: 3px; TEXT-ALIGN: right
+}
+DIV.scott A {
+ PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER: #55c6ff 1px solid; COLOR: #55c6ff; MARGIN-RIGHT: 2px; PADDING-TOP: 2px;TEXT-DECORATION: none
+}
+DIV.scott A:hover {
+BORDER: #55c6ff 1px solid; BACKGROUND-COLOR: #55c6ff; color:#FFFFFF
+}
+DIV.scott A:048bfe {
+BORDER: #55c6ff 1px solid; BACKGROUND-COLOR: #55c6ff; color:#FFFFFF
+}
+DIV.scott SPAN.current {
+ BORDER: #55c6ff 1px solid; PADDING: 2px 5px 2px 5px; FONT-WEIGHT: bold; COLOR: #fff;BACKGROUND-COLOR: #55c6ff; margin:0px;
+}
+DIV.scott SPAN.disabled {
+ BORDER: #55c6ff 1px solid;PADDING-BOTTOM: 2px; COLOR: #55c6ff; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; 
+}
+
+.fya{ COLOR: #fff; BORDER: #55c6ff 1px solid; BACKGROUND-COLOR: #55c6ff;PADDING: 2px 5px 2px 5px; margin:0 }

@@ -1,0 +1,84 @@
+body{
+	font-size:12px;
+	color:#333;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0px; 
+	overflow-x:hidden; overflow-y:auto;
+	}
+
+
+td{
+	color:#333;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif
+	}
+.ClassName{font-size:14px;color:#8b232a; font-weight:bold; background:url(main_03.jpg) no-repeat;}	
+.ClassName1{font-size:14px;color:#8b232a; font-weight:bold; background:url(main_3.jpg) no-repeat;}
+ul,li{ margin:0; padding:0; list-style:none}
+.UnBottom{border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;}
+.Fonten{color: #666666;}
+.input{height:25px; border:1px solid #999999; font-family:Verdana, Arial, Helvetica, sans-serif; color:#333; padding-top:5px}
+.input1{ border:1px solid #999999; font-family:Verdana, Arial, Helvetica, sans-serif; color:#ccc; padding:3px}
+a:link,a:visited,a:active {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration:none;
+	color: #7a0000;
+}
+
+.Menu,.Menu a:link,.Menu a:visited,.Menu a:active{ font-size:14px; font-weight:bold; color:#efe6c5; display:block; height:25px; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+.Menu a:hover{font-size:14px; font-weight:bold; color:#efe6c5; display:block; width:100%; background:#d4535d;height:25px; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+
+.Menu1,.Menu1 a:link,.Menu1 a:visited,.Menu1 a:active,.Menu1 a:hover{font-size:14px; font-weight:bold; color:#efe6c5; display:block; width:100%; background:#d4535d;height:25px; font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+
+.B_bg{background:url(T_bg.jpg) top repeat-x}
+.S_input{width:100px; height:18px; border:#83B9EB solid 1px; background:#691B21; height:22px; color:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif}
+.T24{font-size:24px; font-weight:bold}
+.huiseBro{border:3px solid #868689}
+.fffeceBor{border:1px solid #ccc; background-color:#fffece}
+.Top{background:url(Top.jpg) center no-repeat; height:114px}
+.nomore{font-weight:normal}
+Img{ border:none}
+.Bor{ border:1px solid #ccc}
+.RedTitle{color:#660000; font-size:14px; font-weight:bold}
+.ProTitle{font-size:12px;height:12px;color:white;filter:glow(color=006fc0,strength=2); background-color:#000000}
+.wryh{font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+.T14{ font-size:14px}
+.T18{ font-size:22px}
+.T20{ font-size:20px}
+.T26{ font-size:30px}
+.T16{ font-size:16px; font-weight:bold}
+.Line22{ line-height:22px}
+.Line25{ line-height:25px}
+.Time{ font-size:10px}
+.P1{padding-Top:5px}
+.P2{padding-right:15px}
+.zise{color:#470043}
+.F_Yellow{color:#c27734}
+.Dot{ background:url(Dot.jpg) repeat-x bottom}
+.Gold,.Gold a:link,.Gold a:visited,.Gold a:active{color:#ece9c6;}
+.Banwhite,.Banwhite a:link,.Banwhite a:visited,.Banwhite a:active{color:#FFFFFF; font-weight:bold}
+.white,.white a:link,.white a:visited,.white a:active{color:#FFFFFF;}
+.white1,.white1 a:link,.white1 a:visited,.white1 a:active{color:#FFFFFF;}
+.Red{color:#cc0000}
+.Bottomline{border-bottom:1px solid #b8b2b4}
+DIV.scott {
+PADDING-BOTTOM: 3px; PADDING-TOP: 3px; TEXT-ALIGN: right
+}
+DIV.scott A {
+ PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER: #9a252e 1px solid; COLOR: #9a252e; MARGIN-RIGHT: 2px; PADDING-TOP: 2px;TEXT-DECORATION: none
+}
+DIV.scott A:hover {
+BORDER: #9a252e 1px solid; BACKGROUND-COLOR: #9a252e; color:#FFFFFF
+}
+DIV.scott SPAN.current {
+ BORDER: #9a252e 1px solid; PADDING: 2px 5px 2px 5px; FONT-WEIGHT: bold; COLOR: #fff;BACKGROUND-COLOR: #9a252e; margin:0px;
+}
+DIV.scott SPAN.disabled {
+ BORDER: #9a252e 1px solid;PADDING-BOTTOM: 2px; COLOR: #9a252e; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; 
+}
+
+.fya{ COLOR: #fff; BORDER: #9a252e 1px solid; BACKGROUND-COLOR: #9a252e;PADDING: 2px 5px 2px 5px; margin:0 }

@@ -1,0 +1,1 @@
+<% response.redirect "E_Admin/Login.asp" %>

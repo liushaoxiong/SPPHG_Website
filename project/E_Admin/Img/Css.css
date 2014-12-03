@@ -1,0 +1,50 @@
+body {
+	margin: 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+
+td{
+	color:#333;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif
+	}
+	
+
+a:link,a:visited,a:active {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration:none;
+	color: #009fff;
+}
+
+.P1{padding-top:10px}
+
+.P2{padding-top:5px}
+
+.Textarea {color:#666666; line-height:22px}
+
+.Title {font-size:14px; color:#007bbb; font-weight:bold}
+
+.Wryh{font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"}
+
+.T14{font-size:14px}
+
+.T16{font-size:16px}
+
+.T24{font-size:22px}
+
+.white{color:#FFFFFF}
+
+.inputbg{background:url(input.jpg) no-repeat}
+
+.inputbg1{background:url(input1.jpg) no-repeat}
+
+.Logininput{background:none; border:none; width:260px;font-family:"Î¢ÈíÑÅºÚ","ËÎÌå"; height:34px; color:#333333; padding-top:10px; padding-left:30px}
+
+.Blue,.Blue a:link,.Blue a:visited,.Blue a:active,.Blue a:hover{color:#009ced}
+
+.Time{font-size:10px}

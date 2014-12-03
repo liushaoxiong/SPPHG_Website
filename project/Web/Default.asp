@@ -1,0 +1,319 @@
+<!--#include file="../E_Inc/Conn.asp"-->
+<!--#include file="../E_Inc/Function.asp"-->
+<!--#include file="../E_Inc/E_Config.asp"-->
+<!--#include file="../E_Inc/E_FunPassWord.asp"-->
+<%Default=1%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Keywords" content="<%=ClientkeyWords%>" />
+<meta name="Description" content="<%=Clientdescription %>" />
+<title><%=ClientTitle%></title>
+<link href="../E_img/Style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--#include file="../Web/Top.html"-->
+<table width="1190" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="525" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="112" valign="top">
+<!--#include file="../Web/left.html"-->
+                  <div style='position:absolute; height:60px; width:528px; z-index:100; overflow: hidden; Top:394px'><img src="../E_img/over.png"></div>
+            </td>
+            <td valign="top">
+<script language="JavaScript" type="text/javascript"> 
+<!-- // BannerAD 
+var bannerAD=new Array(); 
+var bannerADlink=new Array(); 
+var adNum=0; 
+<% 
+	dim sqlAD,rsAD
+	Set rsAD = Server.CreateObject("ADODB.Recordset")
+	sqlAD="select top 5 * from E_Ads where AdsContent <> '' And ID > 1 order by Id Asc"
+
+	rsAD.Open sqlAD, Conn, 1										 
+For iRs = 1 to rsAD.Recordcount
+if rsAD.EOF then     
+Exit For 
+end if
+%> 
+bannerAD[<%=iRs-1%>]="<%=rsAD("AdsContent")%>"; 
+bannerADlink[<%=iRs-1%>]="<%=rsAD("AdsLink")%>"; 
+<%
+rsAD.MoveNext 
+next
+rsAD.Close
+set rsAD = nothing
+%>
+
+var preloadedimages=new Array(); 
+for (i=1;i<bannerAD.length;i++){ 
+preloadedimages[i]=new Image(); 
+preloadedimages[i].src=bannerAD[i]; 
+} 
+
+function setTransition(){ 
+if (document.all){ 
+bannerADrotator.filters.revealTrans.Transition=Math.floor(Math.random()*23); 
+bannerADrotator.filters.revealTrans.apply(); 
+} 
+} 
+
+function playTransition(){ 
+if (document.all) 
+bannerADrotator.filters.revealTrans.play() 
+} 
+
+function nextAd(){ 
+if(adNum<bannerAD.length-1)adNum++ ; 
+else adNum=0; 
+setTransition(); 
+document.images.bannerADrotator.src=bannerAD[adNum]; 
+playTransition(); 
+theTimer=setTimeout("nextAd()", 5000); 
+} 
+
+function jump2url(){ 
+jumpUrl=bannerADlink[adNum]; 
+jumpTarget='_blank'; 
+if (jumpUrl != ''){ 
+if (jumpTarget != '')window.open(jumpUrl,jumpTarget); 
+else location.href=jumpUrl; 
+} 
+} 
+function displayStatusMsg() { 
+status=bannerADlink[adNum]; 
+document.returnValue = true; 
+} 
+
+//--> 
+          </script>
+                  <a href="<%=bannerADlink%>"><img src="" name="bannerADrotator" width="410" 
+                                height="310" 
+                                border="0" id="bannerADrotator" 
+                                style="FILTER: revealTrans(duration=2,transition=20)" /></a>
+                  <script language="JavaScript" type="text/javascript">nextAd()</script>
+            </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table>
+      <table width="414" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><a href="/Web/NewsMain.asp?ClassID=1"><img src="../E_img/Hospital_27.jpg" width="414" height="22"></a></td>
+      </tr>
+    </table>
+      <table width="414" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <table width="95%" border="0" cellspacing="0" cellpadding="0">
+        <%
+Set Rs = Server.CreateObject("ADODB.Recordset")
+	SqlRs="select top 8 ID,Title,Title1,ClassID,SortID,AddTime from E_News where ClassID = 1 order by SortID Asc,Id Desc"
+Rs.open SqlRs,conn,1,1 
+For iRs = 1 to Rs.Recordcount
+if Rs.EOF then     
+Exit For 
+end if
+%>
+        <tr>
+          <td height="28"><img src="../E_img/Hospital_32.jpg" align="absmiddle">&nbsp;&nbsp;<a href="/Web/NewsShow.asp?ID=<%=Rs("ID")%>" title="<%=Rs("Title")%>" target="_blank"><%=StrLeft(Rs("Title"),56)%></a></td>
+          <td width="40" align="right" class="Time"><%=right("0"&month(Rs("AddTime")),2)%>-<%=right("0"&day(Rs("AddTime")),2)%></td>
+        </tr>
+        <% 
+If 	iRs = 4 Then
+Response.Write("</tr><tr><td height=10></td><td height=10></td></tr><tr><td height=10 class=Dot></td><td height=8 class=Dot></td></tr><tr><td height=8></td><td height=8></td></tr><tr>")
+end if	
+Rs.movenext
+next
+Rs.Close
+Set Rs = Nothing
+%>
+      </table></td>
+    <td width="230" align="right" valign="top"><!--#include file="../Web/Right.html"--></td>
+  </tr>
+</table>
+<table width="1190" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="445" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="124" valign="top" background="../E_img/new_59.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="2"></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50">&nbsp;</td>
+            <td><table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <%
+Set Rs = Server.CreateObject("ADODB.Recordset")
+	SqlRs="select top 3 ID,Title,Title1,ClassID,SortID,AddTime from E_News where ClassID = 3 order by SortID Asc,Id Desc"
+Rs.open SqlRs,conn,1,1 
+For iRs = 1 to Rs.Recordcount
+if Rs.EOF then     
+Exit For 
+end if
+%>
+              <tr>
+                <td height="22"><a href="/Web/NewsShow.asp?ID=<%=Rs("ID")%>" title="<%=Rs("Title")%>" target="_blank"><%=StrLeft(Rs("Title"),36)%></a></td>
+                </tr>
+              <% 	
+Rs.movenext
+next
+Rs.Close
+Set Rs = Nothing
+%>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td background="../E_img/new_62.jpg">&nbsp;</td>
+            <td width="3"><img src="../E_img/bottom_63.jpg" width="100" height="94" border="0" usemap="#Map"></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td height="218" valign="top" background="../E_img/Hospital_36.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="40">&nbsp;</td>
+        <td>
+<DIV id=demoq style="OVERFLOW: hidden; WIDTH: 735px">
+      <TABLE cellSpacing=0 cellPadding=0 align=left border=0 cellspace="0">
+        <TBODY>
+        <TR>
+          <TD id=demoq1 vAlign=top align="center">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+              <%
+Set Rs = Server.CreateObject("ADODB.Recordset")
+	SqlRs="select top 15 ID,Title,Title1,ClassID,SortID,AddTime,Pictures from E_News where ClassID = 27 and Pictures <> '' order by SortID Asc,Id Desc"
+Rs.open SqlRs,conn,1,1 
+For iRs = 1 to Rs.Recordcount
+if Rs.EOF then     
+Exit For 
+end if
+%>
+    <td><table width="100" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="79" height="79" align="center" bgcolor="#FFFFFF" class="Bor">
+    <a href="/Web/NewsShow.asp?ID=<%=Rs("ID")%>" title="<%=Rs("Title")%>" target="_blank"><img src="<%=PictureUrl(Rs("Pictures"))%>" width="69" height="69"></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="/Web/NewsShow.asp?ID=<%=Rs("ID")%>" title="<%=Rs("Title")%>" target="_blank"><%=Left(Rs("Title"),4)%></a></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<% 
+Rs.movenext
+next
+Rs.Close
+Set Rs = Nothing
+%>
+  </tr>
+</table>
+
+          </TD>
+<TD id=demoq2>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<script language="javascript">
+var speed3=25//速度数值越大速度越慢
+demoq2.innerHTML=demoq1.innerHTML
+function Marqueeq(){
+if(demoq2.offsetWidth-demoq.scrollLeft<=0)
+demoq.scrollLeft-=demoq1.offsetWidth
+else{
+demoq.scrollLeft++
+}
+}
+var MyMarq=setInterval(Marqueeq,speed3)
+demoq.onmouseover=function() {clearInterval(MyMarq)}
+demoq.onmouseout=function() {MyMarq=setInterval(Marqueeq,speed3)}
+</script>
+        </td>
+        <td width="50">&nbsp;</td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="28">&nbsp;</td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="17">&nbsp;</td>
+          <td><table width="420" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="20%" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=29">医院领导</a></strong><a href="/Web/NewsMain.asp?ClassID=29">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+              <td width="20%" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=30">科研管理</a></strong><a href="/Web/NewsMain.asp?ClassID=30">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+              <td width="20%" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=31">党建专栏</a></strong><a href="/Web/NewsMain.asp?ClassID=31">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+              <td width="20%" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=32">健康通道</a></strong><a href="/Web/NewsMain.asp?ClassID=32">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+              <td width="20%" class="T14"><strong><a href="Mailto:banrong@sina.com">领导邮箱</a></strong><a href="Mailto:banrong@sina.com">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="400" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="17">&nbsp;</td>
+          <td><table width="420" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="83" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=33">手术视频</a></strong><a href="/Web/NewsMain.asp?ClassID=33">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+                <td width="83" class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=34">典型病例</a></strong><a href="/Web/NewsMain.asp?ClassID=34">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+                <td class="T14"><strong><a href="/Web/NewsMain.asp?ClassID=35">医院环境展示</a></strong><a href="/Web/NewsMain.asp?ClassID=35">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+                <td width="83" class="T14"><strong><a href="/Web/FriendLiks.asp">友情链接</a></strong><a href="/Web/FriendLiks.asp">&nbsp;<img src="../E_img/F_arr.jpg" width="4" height="8" align="absmiddle"></a></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="1190" border="0" align="center" cellpadding="0" cellspacing="0" background="../E_img/Hospital_41.jpg">
+  <tr>
+    <td height="36"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+        <td width="250" height="30" align="right" class="F_Yellow">陇ICP备11000113号-2&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<div style="margin:0 auto; width:370px;">
+<iframe allowTransparency="true" id="duxiuframe12" border="0" vspace="0" hspace="0" marginwidth="0" marginheight="0" framespacing="0" frameborder="0" scrolling="no" width="360" height="40" src="http://www.duxiu.com/pop/isearch.jsp?style=12&sw=%CA%E4%C8%EB%BC%EC%CB%F7%B4%CA"></iframe>
+</div>
+
+
+<map name="Map"><area shape="rect" coords="3,24,83,43" href="/Web/Aboutus.asp?ID=4">
+<area shape="rect" coords="4,57,80,77" href="/Web/Aboutus.asp?ID=5">
+</map>
+
+<div style="display:none">
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17128108.js"></script>
+<noscript><a href="http://www.51.la/?17128108" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17128108.asp" style="border:none" /></a></noscript>
+</div>
+</body>
+</html>
